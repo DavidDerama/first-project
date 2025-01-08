@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { GoogleDialog } from "./ContinueWithGoogle";
 import ProfileDropdown from "./ProfileDropdown";
 import useUser from "@/hooks/useUser";
+import { Button } from "./ui/button";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -20,7 +21,10 @@ export default function Navbar() {
               Landing Page
             </Link>
             {!isFetching && (
-              <div className="flex gap-3 items-center">
+              <div className="flex gap-4 items-center">
+                <Button className="bg-blue-500 hover:bg-blue-500 hover:opacity-75">
+                  <Link href={"/dashboard"}>Dashboard</Link>
+                </Button>
                 {!user?.id ? <GoogleDialog /> : <ProfileDropdown />}
               </div>
             )}

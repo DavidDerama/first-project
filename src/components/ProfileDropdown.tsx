@@ -13,6 +13,7 @@ import { supabaseBrowser } from "@/lib/supabase/client";
 import { useQueryClient } from "@tanstack/react-query";
 import { useRouter } from "next/navigation";
 import { Button } from "./ui/button";
+import toast from "react-hot-toast";
 
 export default function ProfileDropdown() {
   const { data: user } = useUser();
@@ -24,6 +25,7 @@ export default function ProfileDropdown() {
     await supabase.auth.signOut();
     router.refresh();
     queryClient.clear();
+    toast.success("Successfully signed out");
   }
   return (
     <DropdownMenu>
