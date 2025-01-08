@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`antialiased ${gabarito.className} flex flex-col min-h-screen`}
+        className={`antialiased ${gabarito.className} flex flex-col min-h-screen bg-light`}
       >
         <QueryProvider>
           <Toaster position="top-center" />

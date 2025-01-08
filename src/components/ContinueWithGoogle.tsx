@@ -30,12 +30,12 @@ export function GoogleDialog() {
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
-          <DialogTitle className="text-xl  text-center mb-2">
+          <DialogTitle className="text-2xl text-center mb-1">
             Sign In
           </DialogTitle>
         </DialogHeader>
         <Button
-          className="rounded-full text-sm font-bold py-5 flex gap-3 items-center"
+          className="rounded-full text-base font-bold py-5 flex gap-3 items-center"
           onClick={handleLoginWithGoogle}
         >
           <FcGoogle />
