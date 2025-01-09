@@ -22,9 +22,6 @@ export default function Navbar() {
             {!isFetching && (
               <div className="flex gap-6 items-center">
                 <Link href={"/"} className="px-2 text-dark">
-                  Landing
-                </Link>
-                <Link href={"/"} className="px-2 text-dark">
                   Pricing
                 </Link>
                 <Button className="bg-accent_custom hover:bg-accent_custom hover:opacity-75">
