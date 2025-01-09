@@ -15,16 +15,16 @@ export default function Navbar() {
 
   if (pathname !== "/auth") {
     return (
-      <nav className="bg-[light] text-light shadow-md fixed top-0 w-screen bg-light">
+      <nav className="bg-[light] text-light shadow-md fixed top-0 w-screen bg-white">
         <Content>
           <div className="flex justify-between items-center">
             <Image alt="logo" height={40} width={40} src="/icon.png" />
             {!isFetching && (
               <div className="flex gap-6 items-center">
-                <Link href={"/"} className="px-2">
+                <Link href={"/"} className="px-2 text-dark">
                   Landing
                 </Link>
-                <Link href={"/"} className="px-2">
+                <Link href={"/"} className="px-2 text-dark">
                   Pricing
                 </Link>
                 <Button className="bg-accent_custom hover:bg-accent_custom hover:opacity-75">
