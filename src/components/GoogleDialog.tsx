@@ -26,7 +26,7 @@ export function GoogleDialog() {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button className="bg-transparent m-0">Sign In</Button>
+        <Button>Sign In</Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>

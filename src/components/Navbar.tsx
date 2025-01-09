@@ -2,7 +2,7 @@
 import Link from "next/link";
 import Content from "./Content";
 import { usePathname } from "next/navigation";
-import { GoogleDialog } from "./ContinueWithGoogle";
+import { GoogleDialog } from "./GoogleDialog";
 import ProfileDropdown from "./ProfileDropdown";
 import useUser from "@/hooks/useUser";
 import { Button } from "./ui/button";
@@ -15,12 +15,12 @@ export default function Navbar() {
 
   if (pathname !== "/auth") {
     return (
-      <nav className="bg-[#121212] text-light">
+      <nav className="bg-[light] text-light shadow-md fixed top-0 w-screen bg-light">
         <Content>
           <div className="flex justify-between items-center">
             <Image alt="logo" height={40} width={40} src="/icon.png" />
             {!isFetching && (
-              <div className="flex gap-4 items-center">
+              <div className="flex gap-6 items-center">
                 <Link href={"/"} className="px-2">
                   Landing
                 </Link>
