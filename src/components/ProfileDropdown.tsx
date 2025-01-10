@@ -36,7 +36,7 @@ export default function ProfileDropdown() {
             src={`https://lh3.googleusercontent.com/a/ACg8ocIFY4MS96hiY9ZOEGQFGVFNdpOqvpY4DTrRNIOhcUu1eDoZ8g=s96-c`}
             width={35}
             height={35}
-            className="rounded-full border-2 border-transparent hover:border-white"
+            className="rounded-full border-2 border-transparent hover:border-black"
           />
         ) : (
           <Button className="bg-transparent">{user?.display_name}</Button>
