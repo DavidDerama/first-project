@@ -104,3 +104,8 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+.my-menu-item-link svg {
+  height: 34px !important;
+  width: 34px !important;
+}

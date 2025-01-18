@@ -1,4 +1,4 @@
-import { Calendar, Home, Inbox, Search, Settings } from "lucide-react";
+import { Home, Inbox, Settings } from "lucide-react";
 import {
   Sidebar,
   SidebarContent,
@@ -12,6 +12,8 @@ import {
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
 
+import Image from "next/image";
+
 const items = [
   {
     title: "Home",
@@ -19,19 +21,9 @@ const items = [
     icon: Home,
   },
   {
-    title: "Inbox",
+    title: "Generate a Habit",
     url: "#",
     icon: Inbox,
-  },
-  {
-    title: "Calendar",
-    url: "#",
-    icon: Calendar,
-  },
-  {
-    title: "Search",
-    url: "#",
-    icon: Search,
   },
   {
     title: "Settings",
@@ -44,7 +36,9 @@ export function AppSidebar() {
     <Sidebar>
       <SidebarContent>
         <SidebarGroup>
-          <SidebarGroupLabel>LateControl</SidebarGroupLabel>
+          <SidebarGroupLabel className="text-xl text-dark mt-3 mb-6">
+            <Image alt="logo" height={40} width={40} src="/icon.png" />
+          </SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               {items.map((item) => (
@@ -52,7 +46,7 @@ export function AppSidebar() {
                   <SidebarMenuButton asChild>
                     <a href={item.url}>
                       <item.icon />
-                      <span>{item.title}</span>
+                      <span className="text-base">{item.title}</span>
                     </a>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
