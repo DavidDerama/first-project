@@ -1,4 +1,4 @@
-import { Home, Inbox, Settings } from "lucide-react";
+import { Home, Inbox, Settings, UserRoundPen } from "lucide-react";
 import {
   Sidebar,
   SidebarContent,
@@ -10,9 +10,11 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
+  SidebarSeparator,
 } from "@/components/ui/sidebar";
 
 import Image from "next/image";
+import { DatePicker } from "./calendar/date-picker";
 
 const items = [
   {
@@ -26,11 +28,39 @@ const items = [
     icon: Inbox,
   },
   {
+    title: "Future Self",
+    url: "#",
+    icon: UserRoundPen,
+  },
+  {
     title: "Settings",
     url: "#",
     icon: Settings,
   },
 ];
+
+const data = {
+  user: {
+    name: "shadcn",
+    email: "m@example.com",
+    avatar: "/avatars/shadcn.jpg",
+  },
+  calendars: [
+    {
+      name: "My Calendars",
+      items: ["Personal", "Work", "Family"],
+    },
+    {
+      name: "Favorites",
+      items: ["Holidays", "Birthdays"],
+    },
+    {
+      name: "Other",
+      items: ["Travel", "Reminders", "Deadlines"],
+    },
+  ],
+};
+
 export function AppSidebar() {
   return (
     <Sidebar>
@@ -46,7 +76,7 @@ export function AppSidebar() {
                   <SidebarMenuButton asChild>
                     <a href={item.url}>
                       <item.icon />
-                      <span className="text-base">{item.title}</span>
+                      <span className="text-lg">{item.title}</span>
                     </a>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
@@ -54,6 +84,7 @@ export function AppSidebar() {
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>
+        <DatePicker />
       </SidebarContent>
     </Sidebar>
   );
