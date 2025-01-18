@@ -1,10 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import QueryProvider from "@/components/query-provider";
-import Navbar from "@/components/Navbar";
 import { Toaster } from "react-hot-toast";
 import { Gabarito } from "next/font/google";
-import Footer from "@/components/Footer";
 const gabarito = Gabarito({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -24,9 +22,7 @@ export default function RootLayout({
       >
         <QueryProvider>
           <Toaster position="top-center" />
-          <Navbar />
           {children}
-          <Footer />
         </QueryProvider>
       </body>
     </html>
