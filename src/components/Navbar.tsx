@@ -18,7 +18,10 @@ export default function Navbar() {
       <nav className="bg-[light] text-light shadow-md fixed top-0 w-screen bg-white">
         <Content>
           <div className="flex justify-between items-center">
-            <Image alt="logo" height={40} width={40} src="/icon.png" />
+            <div className="flex items-center gap-2 text-dark font-bold text-xl">
+              <Image alt="logo" height={40} width={40} src="/icon.png" />
+              <h2>LateControl</h2>
+            </div>
             {!isFetching && (
               <div className="flex gap-6 items-center">
                 <Link href={"/"} className="px-2 text-dark">
