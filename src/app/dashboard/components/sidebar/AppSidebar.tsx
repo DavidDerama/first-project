@@ -2,7 +2,6 @@
 import {
   Home,
   Inbox,
-  Settings,
   UserRoundPen,
   ChartNoAxesColumnIncreasing,
 } from "lucide-react";
@@ -22,6 +21,7 @@ import Image from "next/image";
 import { DatePicker } from "./DatePicker";
 import useUser from "@/hooks/useUser";
 import { NavUser } from "./NavUser";
+import Link from "next/link";
 
 const items = [
   {

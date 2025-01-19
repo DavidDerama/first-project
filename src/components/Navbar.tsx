@@ -32,7 +32,7 @@ export default function Navbar() {
             <Image alt="logo" height={40} width={40} src="/icon.png" />
             <h2>LateControl</h2>
           </div>
-          <div className="flex gap-5 sm:absolute sm:left-1/2 sm:-translate-x-1/2">
+          <div className="gap-5 sm:absolute sm:left-1/2 sm:-translate-x-1/2 hidden lg:flex">
             {items.map((item, index) => {
               return (
                 <Link href={item.url} className="px-3 py-1" key={index}>

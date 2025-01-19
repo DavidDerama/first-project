@@ -21,7 +21,6 @@ import {
 import { supabaseBrowser } from "@/lib/supabase/client";
 import { useQueryClient } from "@tanstack/react-query";
 import { useRouter } from "next/navigation";
-import { ModeToggle } from "@/components/ModeToggle";
 import { useTheme } from "next-themes";
 
 export function NavUser({
