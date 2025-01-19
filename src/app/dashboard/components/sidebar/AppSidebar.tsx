@@ -1,4 +1,11 @@
-import { Home, Inbox, Settings, UserRoundPen } from "lucide-react";
+"use client";
+import {
+  Home,
+  Inbox,
+  Settings,
+  UserRoundPen,
+  ChartNoAxesColumnIncreasing,
+} from "lucide-react";
 import {
   Sidebar,
   SidebarContent,
@@ -6,15 +13,15 @@ import {
   SidebarGroup,
   SidebarGroupContent,
   SidebarGroupLabel,
-  SidebarHeader,
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-  SidebarSeparator,
 } from "@/components/ui/sidebar";
 
 import Image from "next/image";
-import { DatePicker } from "./calendar/date-picker";
+import { DatePicker } from "./DatePicker";
+import useUser from "@/hooks/useUser";
+import { NavUser } from "./NavUser";
 
 const items = [
   {
@@ -28,14 +35,14 @@ const items = [
     icon: Inbox,
   },
   {
-    title: "Future Self",
+    title: "Dream Self",
     url: "#",
     icon: UserRoundPen,
   },
   {
-    title: "Settings",
-    url: "#",
-    icon: Settings,
+    title: "Landing",
+    url: "../",
+    icon: ChartNoAxesColumnIncreasing,
   },
 ];
 
@@ -62,12 +69,20 @@ const data = {
 };
 
 export function AppSidebar() {
+  const { data: user, isFetching } = useUser();
+
+  const userInfo = {
+    name: user?.display_name ?? "",
+    email: user?.email ?? "",
+    avatar: user?.img_url ?? "",
+  };
+
   return (
     <Sidebar>
       <SidebarContent>
         <SidebarGroup>
-          <SidebarGroupLabel className="text-xl text-dark mt-3 mb-6">
-            <Image alt="logo" height={40} width={40} src="/icon.png" />
+          <SidebarGroupLabel className="text-xl mt-3 mb-5 p-1">
+            <Image alt="logo" height={40} width={42} src="/icon.png" />
           </SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
@@ -86,6 +101,11 @@ export function AppSidebar() {
         </SidebarGroup>
         <DatePicker />
       </SidebarContent>
+      {!isFetching && (
+        <SidebarFooter className="flex">
+          <NavUser user={userInfo} />
+        </SidebarFooter>
+      )}
     </Sidebar>
   );
 }

@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import QueryProvider from "@/components/query-provider";
+import QueryProvider from "@/components/QueryProvider";
 import { Toaster } from "react-hot-toast";
 import { Gabarito } from "next/font/google";
+import { ThemeProvider } from "@/components/ThemeProvider";
 const gabarito = Gabarito({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "First Saas Project",
+  title: "LateControl",
   description: "Made By David De Rama",
 };
 
@@ -18,12 +19,19 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`antialiased ${gabarito.className} flex flex-col min-h-screen bg-light`}
+        className={`antialiased ${gabarito.className} flex flex-col min-h-screen dark:bg-dark dark:text-light text-dark bg-light`}
       >
-        <QueryProvider>
-          <Toaster position="top-center" />
-          {children}
-        </QueryProvider>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <QueryProvider>
+            <Toaster position="top-center" />
+            {children}
+          </QueryProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
