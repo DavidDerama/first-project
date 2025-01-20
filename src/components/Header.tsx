@@ -2,6 +2,7 @@ import React from "react";
 import Content from "./Content";
 import Balancer from "react-wrap-balancer";
 import Image from "next/image";
+import { FaChrome, FaFirefoxBrowser } from "react-icons/fa";
 
 export default function Header() {
   return (
@@ -16,16 +17,20 @@ export default function Header() {
           </h1>
           <p className="text-xl font-light text-light_paragraph dark:text-dark_paragraph leading-relaxed xl:text-left text-center mb-10">
             <Balancer>
-              Tired of <span className="font-bold">staying up late</span>,{" "}
-              <span className="font-bold">waking up in a rush</span>, or{" "}
-              <span className="font-bold">not getting anything done</span> the
-              next day? LateControl blocks distractions at bedtime and ensures
-              you wake up energized, knowing you had a productive day.
+              LateControl blocks distractions at bedtime and ensures you wake up
+              energized, knowing you had a productive day.
             </Balancer>
           </p>
           <button className="bg-accent_custom text-white self-start py-3 px-10 text-base lg:text-xl rounded-full hover:opacity-80 mx-auto xl:m-0">
             Get LateControl
           </button>
+          <div className="mt-6 flex gap-3 text-light_label items-center text-lg mx-auto xl:mx-0 bg-transparent">
+            <p>Available on: </p>
+            <div className="flex gap-4">
+              <FaChrome />
+              <FaFirefoxBrowser />
+            </div>
+          </div>
         </div>
         <div className="w-[450px] sm:w-[500px] rounded border-2 shadow-md border-dark_input_border overflow-hidden flex justify-center items-center mx-auto xl:m-0 mt-6">
           <Image

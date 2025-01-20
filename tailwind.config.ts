@@ -13,6 +13,7 @@ export default {
         dark: "#1c1c1c",
         light: "#f2f2f2",
         accent_custom: "#0a3fc2",
+        accent_light_custom: "#c1d2fc",
         dark_input_bg: "#171717",
         dark_input_border: "#3c3c3c",
         light_heading: "#2e2e2e",

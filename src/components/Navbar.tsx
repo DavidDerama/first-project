@@ -53,7 +53,7 @@ export default function Navbar() {
                     </Link>
                   </Button>
                 ) : (
-                  <Button>
+                  <Button className="rounded-full px-5">
                     <Link href={"auth"}>Sign In</Link>
                   </Button>
                 )}

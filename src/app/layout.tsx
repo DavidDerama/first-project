@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`antialiased ${gabarito.className} flex flex-col min-h-screen dark:bg-dark dark:text-light text-dark bg-light`}
+        className={`antialiased ${gabarito.className} flex flex-col min-h-screen dark:bg-dark dark:text-light text-dark bg-light scroll-smooth`}
       >
         <ThemeProvider
           attribute="class"
