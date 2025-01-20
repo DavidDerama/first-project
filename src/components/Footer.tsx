@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#121212] text-light border-t-2 border-[#3c3c3c] py-4">
+    <footer className="bg-[#121212] text-light border-t-2 border-[#3c3c3c] py-4 mt-20">
       <Content>
         <div className="flex flex-col sm:flex-row sm:gap-0 gap-3 sm:relative justify-between">
           <p className="text-lg font-bold">© LateControl</p>
