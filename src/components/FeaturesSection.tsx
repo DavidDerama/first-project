@@ -6,7 +6,7 @@ import Features from "./Features";
 export default function FeaturesSection() {
   return (
     <Content className="w-full min-h-screen">
-      <div className="text-center max-w-[900px] mx-auto pt-28" id="features">
+      <div className="text-center max-w-[800px] mx-auto pt-28" id="features">
         <h2 className="text-5xl">
           <Balancer>
             Tired of <span>staying up late</span>,{" "}
@@ -22,8 +22,7 @@ export default function FeaturesSection() {
         </h2>
         <p className="pt-6 pb-8 text-light_paragraph dark:text-dark_paragraph text-xl">
           <Balancer>
-            LateControl gives users a sense of achievement by making sure they
-            wake up knowing they accomplished something the day before.
+            LateControl breaks the cycle and ensures you get your tasks done.
           </Balancer>
         </p>
       </div>

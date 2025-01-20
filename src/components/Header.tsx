@@ -6,8 +6,8 @@ import { FaChrome, FaFirefoxBrowser } from "react-icons/fa";
 
 export default function Header() {
   return (
-    <header className="min-h-screen w-full">
-      <Content className="flex xl:flex-row flex-col gap-8 lg:justify-between pt-48">
+    <header className="w-full">
+      <Content className="flex xl:flex-row flex-col gap-8 lg:justify-between pt-48 pb-12">
         <div className="max-w-[650px] flex flex-col justify-center mx-auto xl:m-0">
           <h1 className="text-6xl text-light_heading dark:text-dark_heading font-black leading-none -tracking-[0.4px] text-center xl:text-left mb-5">
             <Balancer>
@@ -26,13 +26,13 @@ export default function Header() {
           </button>
           <div className="mt-6 flex gap-3 text-light_label items-center text-lg mx-auto xl:mx-0 bg-transparent">
             <p>Available on: </p>
-            <div className="flex gap-4">
+            <div className="flex gap-3">
               <FaChrome />
               <FaFirefoxBrowser />
             </div>
           </div>
         </div>
-        <div className="w-[450px] sm:w-[500px] rounded border-2 shadow-md border-dark_input_border overflow-hidden flex justify-center items-center mx-auto xl:m-0 mt-6">
+        <div className="w-[400px] lg:w-[900px] rounded border-2 shadow-md border-dark_input_border overflow-hidden flex justify-center items-center mx-auto xl:m-0 mt-6">
           <Image
             width={500}
             height={400}

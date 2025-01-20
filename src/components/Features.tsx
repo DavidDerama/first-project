@@ -36,7 +36,7 @@ const FeaturesData: Feature[] = [
     id: 4,
     name: "AI Assistance",
     description:
-      "Our AI recommends tasks and blocks websites based on your goals. For example, if your goal is to be financially responsible, it may recommend blocking gambling sites to help you stay on track.",
+      "Our AI recommends daily tasks and blocks websites based on your goals. For example, if your goal is to be financially responsible, it may recommend blocking gambling sites to help you stay on track.",
     icon: <Bot size={iconSize} />,
   },
   {
@@ -56,7 +56,7 @@ export default function Features() {
           return (
             <div
               key={feature.id}
-              className="flex-grow basis-[350px] border border-dark_input_border rounded-lg p-4 bg-dark_input_bg"
+              className="flex-grow basis-[350px] border border-dark_input_border rounded-lg p-4 bg-white dark:bg-dark_input_bg"
             >
               <div
                 className="mb-2 w-fit rounded-lg bg-accent_custom p-1 text-center text-light

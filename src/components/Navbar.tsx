@@ -5,6 +5,7 @@ import ProfileDropdown from "./ProfileDropdown";
 import useUser from "@/hooks/useUser";
 import { Button } from "./ui/button";
 import Image from "next/image";
+import { ModeToggle } from "./ModeToggle";
 
 const items = [
   {
@@ -42,6 +43,7 @@ export default function Navbar() {
             })}
           </div>
           <div className="flex gap-6 items-center">
+            <ModeToggle />
             {isFetching ? (
               <></>
             ) : (
