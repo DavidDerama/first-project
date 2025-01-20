@@ -25,7 +25,7 @@ const lifetime = {
 export default function Plans() {
   return (
     <div className="mx-auto mt-10 grid max-w-lg grid-cols-1 items-center gap-y-6 sm:mt-20 sm:gap-y-0 lg:max-w-4xl lg:grid-cols-2">
-      <div className="rounded-3xl rounded-t-3xl bg-white/90 p-8 ring-1 ring-gray-900/10 sm:mx-8 sm:rounded-b-none sm:p-10 lg:mx-0 lg:rounded-bl-3xl lg:rounded-tr-none">
+      <div className="rounded-3xl rounded-t-3xl bg-white/95 p-8 ring-1 ring-gray-900/10 sm:mx-8 sm:rounded-b-none sm:p-10 lg:mx-0 lg:rounded-bl-3xl lg:rounded-tr-none">
         <h3 className="text-base/7 font-semibold text-dark">
           {subscription.title}
         </h3>
@@ -38,10 +38,7 @@ export default function Plans() {
         <p className="mt-6 text-base/7 text-gray-600">
           {subscription.description}
         </p>
-        <ul
-          role="list"
-          className="mt-8 space-y-3 text-sm/6 text-gray-600 sm:mt-10"
-        >
+        <ul role="list" className="mt-8 space-y-3 text-sm text-dark sm:mt-10">
           {subscription.benefits.map((item, index) => {
             return (
               <li className="flex gap-x-3" key={index}>
@@ -50,10 +47,7 @@ export default function Plans() {
                   viewBox="0 0 20 20"
                   data-slot="icon"
                 >
-                  <path
-                    fill-rule="evenodd"
-                    d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z"
-                  />
+                  <path d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" />
                 </svg>
                 {item}
               </li>
@@ -61,7 +55,7 @@ export default function Plans() {
           })}
         </ul>
         <button className="w-full mt-8 block rounded-lg px-3.5 py-2.5 text-center font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 sm:mt-10 bg-black text-light hover:opacity-80">
-          Get started today
+          Get started
         </button>
       </div>
       <div className="relative rounded-3xl bg-white/95 border-2 border-accent_custom p-8 shadow-2xl  sm:p-10">
@@ -79,10 +73,7 @@ export default function Plans() {
         <p className="mt-6 text-base/7 text-light_paragraph">
           {lifetime.description}
         </p>
-        <ul
-          role="list"
-          className="mt-8 space-y-3 text-sm/6 text-dark  sm:mt-10"
-        >
+        <ul role="list" className="mt-8 space-y-3 text-sm text-dark  sm:mt-10">
           {lifetime.benefits.map((item, index) => {
             return (
               <li className="flex gap-x-3" key={index}>
@@ -100,7 +91,7 @@ export default function Plans() {
           })}
         </ul>
         <button className="hover:opacity-80 mt-8 block rounded-lg bg-accent_custom px-3.5 py-2.5 text-center  font-semibold text-white shadow-sm  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 w-full sm:mt-10">
-          Get started today
+          Get started
         </button>
       </div>
     </div>

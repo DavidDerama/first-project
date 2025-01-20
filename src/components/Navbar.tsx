@@ -42,7 +42,7 @@ export default function Navbar() {
               );
             })}
           </div>
-          <div className="flex gap-6 items-center">
+          <div className="flex sm:gap-5 gap-3 items-center">
             <ModeToggle />
             {isFetching ? (
               <></>

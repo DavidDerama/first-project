@@ -32,7 +32,7 @@ export default function Header() {
             </div>
           </div>
         </div>
-        <div className="w-[400px] lg:w-[900px] rounded border-2 shadow-md border-dark_input_border overflow-hidden flex justify-center items-center mx-auto xl:m-0 mt-6">
+        <div className="w-[380px] lg:w-[900px] rounded border-2 shadow-md border-dark_input_border overflow-hidden flex justify-center items-center mx-auto xl:m-0 mt-6">
           <Image
             width={500}
             height={400}
