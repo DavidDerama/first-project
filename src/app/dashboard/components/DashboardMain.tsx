@@ -4,7 +4,7 @@ import Content from "@/components/Content";
 export default function DashboardMain({ children }: { children: ReactNode }) {
   return (
     <main className="flex-grow pt-7">
-      <Content>{children}</Content>
+      <Content className="max-w-screen-lg">{children}</Content>
     </main>
   );
 }

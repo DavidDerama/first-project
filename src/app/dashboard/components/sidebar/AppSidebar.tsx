@@ -22,51 +22,31 @@ import { DatePicker } from "./DatePicker";
 import useUser from "@/hooks/useUser";
 import { NavUser } from "./NavUser";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { twMerge } from "tailwind-merge";
 
 const items = [
   {
     title: "Home",
-    url: "#",
+    url: "/dashboard",
     icon: Home,
   },
   {
-    title: "Generate a Habit",
-    url: "#",
-    icon: Inbox,
-  },
-  {
     title: "Dream Self",
-    url: "#",
+    url: "/dashboard/dream",
     icon: UserRoundPen,
   },
+  // {
+  //   title: "Generate a Habit",
+  //   url: "/dashboard/generate",
+  //   icon: Inbox,
+  // },
   {
     title: "Landing",
     url: "../",
     icon: ChartNoAxesColumnIncreasing,
   },
 ];
-
-const data = {
-  user: {
-    name: "shadcn",
-    email: "m@example.com",
-    avatar: "/avatars/shadcn.jpg",
-  },
-  calendars: [
-    {
-      name: "My Calendars",
-      items: ["Personal", "Work", "Family"],
-    },
-    {
-      name: "Favorites",
-      items: ["Holidays", "Birthdays"],
-    },
-    {
-      name: "Other",
-      items: ["Travel", "Reminders", "Deadlines"],
-    },
-  ],
-};
 
 export function AppSidebar() {
   const { data: user, isFetching } = useUser();
@@ -76,6 +56,8 @@ export function AppSidebar() {
     email: user?.email ?? "",
     avatar: user?.img_url ?? "",
   };
+
+  const location = usePathname();
 
   return (
     <Sidebar>
@@ -89,10 +71,17 @@ export function AppSidebar() {
               {items.map((item) => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton asChild>
-                    <a href={item.url}>
+                    <Link href={item.url}>
                       <item.icon />
-                      <span className="text-lg">{item.title}</span>
-                    </a>
+                      <span
+                        className={twMerge(
+                          "text-lg font-bold text-dark dark:text-light",
+                          location === item.url ? "font-bold" : "font-normal"
+                        )}
+                      >
+                        {item.title}
+                      </span>
+                    </Link>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
               ))}

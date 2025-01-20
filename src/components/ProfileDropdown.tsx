@@ -23,9 +23,9 @@ export default function ProfileDropdown() {
   async function signOut() {
     const supabase = supabaseBrowser();
     await supabase.auth.signOut();
+    toast.success("Successfully signed out");
     router.refresh();
     queryClient.clear();
-    toast.success("Successfully signed out");
   }
   return (
     <DropdownMenu>
