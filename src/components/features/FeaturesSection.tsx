@@ -1,5 +1,5 @@
 import React from "react";
-import Content from "./Content";
+import Content from "../Content";
 import Balancer from "react-wrap-balancer";
 import Features from "./Features";
 
@@ -22,7 +22,7 @@ export default function FeaturesSection() {
         </h2>
         <p className="pt-6 pb-8 text-light_paragraph dark:text-dark_paragraph text-xl">
           <Balancer>
-            LateControl breaks the cycle and ensures you get your tasks done.
+            LateControl breaks the cycle and ensures you achieve your goals.
           </Balancer>
         </p>
       </div>

@@ -56,7 +56,7 @@ export default function Features() {
           return (
             <div
               key={feature.id}
-              className="flex-grow basis-[350px] border border-dark_input_border rounded-lg p-4 bg-white dark:bg-dark_input_bg"
+              className="flex-grow basis-[350px] border-2 dark:border-dark_input_border rounded-lg p-4 bg-white/95 dark:bg-dark_input_bg"
             >
               <div
                 className="mb-2 w-fit rounded-lg bg-accent_custom p-1 text-center text-light

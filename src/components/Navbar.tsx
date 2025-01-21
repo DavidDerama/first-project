@@ -26,7 +26,7 @@ export default function Navbar() {
   const { data: user, isFetching } = useUser();
 
   return (
-    <nav className="bg-[light] shadow-md fixed top-0 w-screen bg-white dark:bg-[#121212]">
+    <nav className="bg-[light] shadow-md fixed top-0 w-screen bg-white dark:bg-[#121212] z-50">
       <Content>
         <div className="flex justify-between items-center">
           <div className="flex items-center gap-2 font-bold text-xl">
@@ -42,7 +42,7 @@ export default function Navbar() {
               );
             })}
           </div>
-          <div className="flex sm:gap-5 gap-3 items-center">
+          <div className="flex sm:gap-5 gap-2 items-center">
             <ModeToggle />
             {isFetching ? (
               <></>
