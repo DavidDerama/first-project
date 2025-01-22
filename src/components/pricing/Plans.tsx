@@ -15,10 +15,11 @@ const lifetime = {
   title: "Lifetime Access",
   description: "Pay Once. Benefit Forever.",
   benefits: [
-    "Blocks websites during bedtime",
+    "Our chrome extension that blocks websites during bedtime",
     "Daily tasks tracker",
-    "Access to our discord community",
+    "Private discord community",
     "Limited AI usage per day",
+    "Automatically block websites based on your goals",
   ],
   amount: 25,
   priceId: "price_1Q",
