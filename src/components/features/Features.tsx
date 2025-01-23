@@ -43,7 +43,7 @@ const FeaturesData: Feature[] = [
     id: 5,
     name: "Community",
     description:
-      "Connect with others on the same journey! Share your progress, get feedback, and find support as you work towards your goals.",
+      "Meet others on the same journey! Share your progress, ask for advice, and get valuable feedback as you work towards your goals.",
     icon: <Users size={iconSize} />,
   },
 ];
