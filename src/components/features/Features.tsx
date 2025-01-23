@@ -22,14 +22,14 @@ const FeaturesData: Feature[] = [
     id: 2,
     name: "Time Management",
     description:
-      "Blocks all websites during your bedtime and redirects you to a dashboard with your daily tasks.",
+      "By blocking websites at bedtime and showing your completed tasks, you feel accomplished and excited for the next day, making sleeping early easier.",
     icon: <Clock size={iconSize} />,
   },
   {
     id: 3,
     name: "Habit Tracking",
     description:
-      "Complete tasks, level up; miss them, level down. No confusing systems, just real progress. Finish half or all your tasks, and your streak goes up.",
+      "Forget the fake rewards and empty progress on your screen. Complete tasks, level up; miss them, level down.",
     icon: <ChartArea size={iconSize} />,
   },
   {
