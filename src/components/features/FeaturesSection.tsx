@@ -6,7 +6,7 @@ import Features from "./Features";
 export default function FeaturesSection() {
   return (
     <Content className="w-full min-h-screen">
-      <div className="text-center max-w-[800px] mx-auto pt-28" id="features">
+      <div className="text-center max-w-[1000px] mx-auto pt-28" id="features">
         <h2 className="text-5xl">
           <Balancer>
             Tired of <span>staying up late</span>,{" "}
