@@ -15,7 +15,7 @@ const FeaturesData: Feature[] = [
     id: 1,
     name: "Easy to Use",
     description:
-      "Unlike other habit trackers with complex systems and confusing rewards, our website is built for simplicity.",
+      "Unlike other habit trackers with complex systems and steep learning curves, our website is built for simplicity.",
     icon: <Sparkles size={iconSize} />,
   },
   {
