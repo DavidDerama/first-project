@@ -28,7 +28,7 @@ const lifetime = {
 export default function Plans() {
   return (
     <div className="mx-auto mt-10 grid max-w-lg grid-cols-1 items-center gap-y-6 sm:mt-20 sm:gap-y-0 lg:max-w-4xl lg:grid-cols-2">
-      <div className="dark:border-dark_input_border border-2  rounded-3xl rounded-t-3xl bg-white/95 dark:bg-dark_input_bg p-8 ring-1 ring-gray-900/10 sm:mx-8 sm:rounded-b-none sm:p-10 lg:mx-0 lg:rounded-bl-3xl lg:rounded-tr-none">
+      <div className="dark:border-dark_input_border border-2  rounded-3xl rounded-t-3xl bg-white/80 dark:bg-dark_input_bg/60 p-8 ring-1 ring-gray-900/10 sm:mx-8 sm:rounded-b-none sm:p-10 lg:mx-0 lg:rounded-bl-3xl lg:rounded-tr-none">
         <h3 className="text-base/7 font-semibold text-dark dark:text-light">
           {subscription.title}
         </h3>
@@ -63,7 +63,7 @@ export default function Plans() {
             );
           })}
         </ul>
-        <button className="w-full mt-8 block rounded-lg px-3.5 py-2.5 text-center font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 sm:mt-10 bg-black dark:bg-light dark:text-dark text-light hover:opacity-80">
+        <button className="w-full mt-8 block rounded-lg px-3.5 py-2.5 text-center font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 sm:mt-10 bg-accent_custom text-light hover:opacity-80">
           Get started
         </button>
       </div>

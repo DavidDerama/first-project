@@ -14,9 +14,9 @@ export default function FounderSection() {
             <Balancer>
               I spent years stuck in a cycle of late nights, rushed mornings,
               and unproductive weekends. <br /> <br />
-              I thought it was normal since on weekdays I stayed up late to
-              study better, and on weekends, I did the same because I had
-              nothing to do the next day and could just play with friends.
+              I thought it was normal since on weekdays I stayed up late on my
+              computer to study better, and on weekends, I did the same because
+              I had nothing to do the next day and could just play with friends.
               <br />
               <br />
               But eventually, I hit a breaking point and realized this lifestyle
