@@ -5,7 +5,7 @@ import { CurrentStreak } from "./components/home/CurrentStreak";
 export default function Page() {
   return (
     <DashboardMain>
-      <h2 className="text-4xl">Good Evening!</h2>
+      <h2 className="text-4xl">Overview</h2>
       <div className="flex gap-2 mt-8 flex-wrap">
         <StreaksWeekly />
         <CurrentStreak />

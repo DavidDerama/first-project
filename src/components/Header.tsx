@@ -2,7 +2,7 @@ import React from "react";
 import Content from "./Content";
 import Balancer from "react-wrap-balancer";
 import Image from "next/image";
-import { FaChrome, FaFirefoxBrowser } from "react-icons/fa";
+import { FaChrome } from "react-icons/fa";
 
 export default function Header() {
   return (
@@ -11,8 +11,8 @@ export default function Header() {
         <div className="max-w-[650px] flex flex-col justify-center mx-auto xl:m-0">
           <h1 className="text-6xl text-light_heading dark:text-dark_heading font-black leading-none -tracking-[0.4px] text-center xl:text-left mb-5">
             <Balancer>
-              Sleep on Time and <br></br>{" "}
               <span className="text-accent_custom">Get More Done</span> Tomorrow
+              by Sleeping on Time<br></br>{" "}
             </Balancer>
           </h1>
           <p className="text-xl font-light text-light_paragraph dark:text-dark_paragraph leading-relaxed xl:text-left text-center mb-10">
@@ -28,7 +28,6 @@ export default function Header() {
             <p>Available on: </p>
             <div className="flex gap-3">
               <FaChrome />
-              <FaFirefoxBrowser />
             </div>
           </div>
         </div>
