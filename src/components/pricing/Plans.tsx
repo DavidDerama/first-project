@@ -6,7 +6,6 @@ const subscription = {
   benefits: [
     "Unlock unlimited AI usage",
     "Receive personalized monthly AI recaps of your progress similar to Spotify",
-    "Get prioritized support",
   ],
   amount: 5,
   priceId: "price_1Q",

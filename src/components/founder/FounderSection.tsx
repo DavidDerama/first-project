@@ -14,26 +14,26 @@ export default function FounderSection() {
             I spent years stuck in a cycle of late nights, rushed mornings, and
             unproductive weekends. <br /> <br />
             I thought it was normal since on weekdays I would stay up late on my
-            computer to study better, and on weekends, I would do the same
-            because I had nothing to do the next day and could just play with
-            friends.
+            computer to be more focused while studying, and on weekends, I would
+            do the same because I had nothing to do the next day and could just
+            play with friends.
             <br />
             <br />
             But eventually, I hit a breaking point and realized this lifestyle
-            was taking a serious toll on my health. I decided to take control
-            and change my habits with a strategy. After a couple years of
-            learning and making mistakes, I finally transformed my life and
-            created LateControl to share the strategy that worked for me.
+            was taking a serious toll on my health. That's when I decided to
+            take control and make a change. After a couple years of learning and
+            making mistakes, I finally transformed my life and created
+            LateControl to share the strategy that worked for me.
             <br />
             <br />
             Along the way, I tried so many apps, but none of them worked for me
             since they were either too complicated, too expensive or required me
-            having multiple apps just to achieve my goals. At the end, I found
-            myself spending more time on my computer instead of my phone, making
-            the apps basically useless.
+            having multiple apps just to achieve my goals. In the end, I found
+            myself spending more time on my computer at night than my phone,
+            making the apps basically useless.
             <br />
-            <br />I wish I had this tool back then that could do everything I
-            needed, and I hope it helps you too.
+            <br />I wish I had this tool back then to do everything I needed,
+            and I truly hope it helps you too.
           </p>
         </div>
       </Content>
