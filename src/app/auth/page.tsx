@@ -24,7 +24,7 @@ export default function page() {
         </div>
         <h2 className="text-4xl font-bold text-center">Sign In</h2>
         <Button
-          className="w-4/5 mx-auto mt-8 mb-2 rounded-lg text-lg font-bold py-6 flex gap-3 items-center border-dark_input_border  bg-black text-light  hover:bg-black hover:text-light border border-black hover:opacity-85"
+          className="w-4/5 mx-auto mt-8 mb-2 rounded-lg text-lg font-bold py-6 flex gap-3 items-center border-dark_input_border  bg-black text-light  hover:bg-black hover:text-light border  hover:opacity-85"
           onClick={handleLoginWithGoogle}
         >
           <FcGoogle />
