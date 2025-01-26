@@ -85,7 +85,7 @@ export default function Plans() {
         </p>
         <ul
           role="list"
-          className="mt-8 space-y-3 text-sm text-dark dark:text-light  sm:mt-10"
+          className="mt-8 space-y-3 text-sm text-dark dark:text-light sm:mt-10"
         >
           {lifetime.benefits.map((item, index) => {
             return (
