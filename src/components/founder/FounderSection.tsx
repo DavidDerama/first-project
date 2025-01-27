@@ -1,6 +1,5 @@
 import React from "react";
 import Content from "../Content";
-import Balancer from "react-wrap-balancer";
 
 export default function FounderSection() {
   return (
