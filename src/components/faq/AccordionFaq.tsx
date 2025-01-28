@@ -20,7 +20,7 @@ const items = [
   },
   {
     title:
-      "What's the difference between the lifetime access and the subscription?",
+      "What's the difference between the subscription and the lifetime access?",
     content: "Yes. It adheres to the WAI-ARIA design pattern.s",
   },
 ];
