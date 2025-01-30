@@ -9,17 +9,17 @@ export default function Header() {
     <header className="w-full">
       <Content className="flex flex-col gap-8 pt-40 pb-12">
         <div className="max-w-[750px] flex flex-col justify-center mx-auto">
-          <h1 className="text-6xl text-light_heading dark:text-dark_heading font-black leading-none -tracking-[0.4px] text-center w-full mb-5">
+          <h1 className="lg:text-7xl text-6xl text-light_heading dark:text-dark_heading font-black leading-none -tracking-[0.4px] text-center w-full mb-5">
             <Balancer>
               <span className="text-accent_custom">Get More Done</span> Tomorrow
               by Sleeping on Time<br></br>{" "}
             </Balancer>
           </h1>
-          <p className="text-xl font-light text-light_paragraph dark:text-dark_paragraph leading-relaxed text-center mb-10">
+          <p className="text-2xl font-light text-light_paragraph dark:text-dark_paragraph leading-relaxed text-center mb-10">
             LateControl blocks distractions at bedtime and ensures you wake up
             energized, knowing you had a productive day.
           </p>
-          <button className="bg-accent_custom text-white self-start py-3 px-10 text-base lg:text-xl rounded-full hover:opacity-80 mx-auto">
+          <button className="bg-accent_custom text-white self-start py-4 px-12 text-lg lg:text-xl rounded-full hover:opacity-80 mx-auto">
             Get LateControl
           </button>
           <div className="mt-6 flex gap-3 text-light_label items-center text-lg mx-auto bg-transparent">
