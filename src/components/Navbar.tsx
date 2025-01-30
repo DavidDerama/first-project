@@ -61,7 +61,7 @@ export default function Navbar() {
                 )}
               </>
             )}
-            {user?.id && <ProfileDropdown />}
+            {/* {user?.id && <ProfileDropdown />} */}
           </div>
         </div>
       </Content>

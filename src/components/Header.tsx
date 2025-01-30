@@ -7,8 +7,8 @@ import { FaChrome } from "react-icons/fa";
 export default function Header() {
   return (
     <header className="w-full">
-      <Content className="flex flex-col gap-8 pt-40 pb-12">
-        <div className="max-w-[750px] flex flex-col justify-center mx-auto">
+      <Content className="flex flex-col gap-8 pt-40 pb-12 ">
+        <div className="max-w-[850px] flex flex-col justify-center mx-auto">
           <h1 className="lg:text-7xl text-6xl text-light_heading dark:text-dark_heading font-black leading-none -tracking-[0.4px] text-center w-full mb-5">
             <Balancer>
               <span className="text-accent_custom">Get More Done</span> Tomorrow
