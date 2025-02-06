@@ -4,6 +4,8 @@ import Balancer from "react-wrap-balancer";
 import Image from "next/image";
 import { FaChrome } from "react-icons/fa";
 
+import HeaderText from "./HeaderText";
+
 export default function Header() {
   return (
     <header className="w-full">
@@ -11,7 +13,11 @@ export default function Header() {
         <div className="max-w-[850px] flex flex-col justify-center mx-auto">
           <h1 className="lg:text-7xl text-6xl text-light_heading dark:text-dark_heading font-black leading-none -tracking-[0.4px] text-center w-full mb-5">
             <Balancer>
-              <span className="text-accent_custom">Get More Done</span> Tomorrow
+              <HeaderText />
+              <p className="sr-only">
+                Get More Done Tomorrow and Turn late night ideas into reality
+              </p>
+              <br />
               by Sleeping on Time<br></br>{" "}
             </Balancer>
           </h1>
