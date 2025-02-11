@@ -13,7 +13,7 @@ const HeaderText = () => {
         if (state >= text.length - 1) return 0;
         return state + 1;
       });
-    }, 2500);
+    }, 8000);
     return () => clearInterval(id);
   }, []);
 
