@@ -1,10 +1,5 @@
 "use client";
-import {
-  Home,
-  Inbox,
-  UserRoundPen,
-  ChartNoAxesColumnIncreasing,
-} from "lucide-react";
+import { Home, UserRoundPen, ChartNoAxesColumnIncreasing } from "lucide-react";
 import {
   Sidebar,
   SidebarContent,
@@ -24,6 +19,7 @@ import { NavUser } from "./NavUser";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { twMerge } from "tailwind-merge";
+import Reminder from "./Reminder";
 
 const items = [
   {
@@ -70,13 +66,21 @@ export function AppSidebar() {
             <SidebarMenu>
               {items.map((item) => (
                 <SidebarMenuItem key={item.title}>
-                  <SidebarMenuButton asChild>
+                  <SidebarMenuButton
+                    asChild
+                    className={twMerge(
+                      "py-6",
+                      location === item.url && "bg-sidebar-accent"
+                    )}
+                  >
                     <Link href={item.url}>
                       <item.icon />
                       <span
                         className={twMerge(
                           "text-lg font-bold text-dark dark:text-light",
-                          location === item.url ? "font-bold" : "font-normal"
+                          location === item.url
+                            ? "font-semibold"
+                            : "font-normal"
                         )}
                       >
                         {item.title}
@@ -88,6 +92,7 @@ export function AppSidebar() {
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>
+        <Reminder />
         <DatePicker />
       </SidebarContent>
       {!isFetching && (
