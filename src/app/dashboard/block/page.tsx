@@ -4,7 +4,7 @@ import DashboardMain from "../components/DashboardMain";
 export default function page() {
   return (
     <DashboardMain>
-      <h2 className="text-4xl font-bold">My dream self is....</h2>
+      <h2 className="text-4xl font-bold">Block List</h2>
     </DashboardMain>
   );
 }

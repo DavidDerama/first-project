@@ -47,11 +47,6 @@ const items = [
       </p>
     ),
   },
-  {
-    title:
-      "What's the difference between the subscription and the lifetime access?",
-    content: <p></p>,
-  },
 ];
 
 export function AccordionFaq() {

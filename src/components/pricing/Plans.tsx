@@ -1,7 +1,7 @@
 import React from "react";
 
 const subscription = {
-  title: "Subscription",
+  title: "Monthly",
   description: "Everything in Lifetime Access plus:",
   benefits: [
     "Unlock unlimited AI usage",
@@ -22,7 +22,7 @@ const lifetime = {
     "Join a private discord community",
     "Limited AI usage per day",
   ],
-  amount: 25,
+  amount: 35,
   priceId: "price_1Q",
 };
 

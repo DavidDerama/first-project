@@ -40,7 +40,7 @@ const items = [
   },
   {
     title: "Block Websites",
-    url: "/dashboard/generate",
+    url: "/dashboard/block",
     icon: BrickWall,
   },
   {
@@ -75,7 +75,7 @@ export function AppSidebar() {
                   <SidebarMenuButton
                     asChild
                     className={twMerge(
-                      "py-6",
+                      "py-5",
                       location === item.url && "bg-sidebar-accent"
                     )}
                   >
@@ -99,8 +99,8 @@ export function AppSidebar() {
           </SidebarGroupContent>
         </SidebarGroup>
         <Reminder />
-        {/* <DatePicker /> */}
         <Productive />
+        {/* <DatePicker /> */}
       </SidebarContent>
       {!isFetching && (
         <SidebarFooter className="flex">

@@ -17,26 +17,29 @@ import {
 } from "@/components/ui/card";
 import { ChartConfig, ChartContainer } from "@/components/ui/chart";
 
+const days = 20;
+
 const chartData = [
-  { browser: "safari", days: 20, fill: "var(--color-safari)" },
+  { time: "monthly", days: days, fill: "var(--color-monthly)" },
 ];
 
 const chartConfig = {
   days: {
     label: "Days",
   },
-  safari: {
-    label: "Safari",
+  monthly: {
+    label: "Monthly",
     color: "hsl(var(--chart-2))",
   },
 } satisfies ChartConfig;
 
 export function ProductiveDays() {
+  const productiveDaysInAMonth = 90 + (days / 30) * 360;
   return (
-    <Card className="flex flex-col w-[95%] mx-auto pb-4 bg-light dark:bg-dark_input_bg dark:border-dark_input_border">
+    <Card className="flex flex-col w-[95%] mx-auto pb-4 bg-light dark:bg-dark_input_bg dark:border-dark_input_border mb-6">
       <CardHeader className="items-center pb-0">
-        <CardTitle className="text-xl">Productive Days</CardTitle>
-        <CardDescription className="text-lg">February</CardDescription>
+        <CardTitle className="text-lg">Productive Days</CardTitle>
+        <CardDescription>February</CardDescription>
       </CardHeader>
       <CardContent className="flex-1 pb-0">
         <ChartContainer
@@ -45,8 +48,8 @@ export function ProductiveDays() {
         >
           <RadialBarChart
             data={chartData}
-            startAngle={0}
-            endAngle={250}
+            startAngle={90}
+            endAngle={productiveDaysInAMonth}
             innerRadius={80}
             outerRadius={110}
           >
@@ -72,7 +75,7 @@ export function ProductiveDays() {
                         <tspan
                           x={viewBox.cx}
                           y={viewBox.cy}
-                          className="fill-foreground text-5xl font-bold"
+                          className="fill-foreground text-4xl font-bold"
                         >
                           {chartData[0].days.toLocaleString()}
                         </tspan>
