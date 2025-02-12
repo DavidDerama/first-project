@@ -1,5 +1,10 @@
 "use client";
-import { Home, UserRoundPen, ChartNoAxesColumnIncreasing } from "lucide-react";
+import {
+  Home,
+  UserRoundPen,
+  ChartNoAxesColumnIncreasing,
+  BrickWall,
+} from "lucide-react";
 import {
   Sidebar,
   SidebarContent,
@@ -20,6 +25,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { twMerge } from "tailwind-merge";
 import Reminder from "./Reminder";
+import Productive from "./Productive";
 
 const items = [
   {
@@ -32,11 +38,11 @@ const items = [
     url: "/dashboard/dream",
     icon: UserRoundPen,
   },
-  // {
-  //   title: "Generate a Habit",
-  //   url: "/dashboard/generate",
-  //   icon: Inbox,
-  // },
+  {
+    title: "Block Websites",
+    url: "/dashboard/generate",
+    icon: BrickWall,
+  },
   {
     title: "Landing",
     url: "../",
@@ -93,7 +99,8 @@ export function AppSidebar() {
           </SidebarGroupContent>
         </SidebarGroup>
         <Reminder />
-        <DatePicker />
+        {/* <DatePicker /> */}
+        <Productive />
       </SidebarContent>
       {!isFetching && (
         <SidebarFooter className="flex">

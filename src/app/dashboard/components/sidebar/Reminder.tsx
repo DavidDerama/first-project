@@ -10,7 +10,7 @@ export default function Reminder() {
             <span className="font-bold">Good morning,</span>
             <br />
             You have <span className="text-accent_custom">4</span> tasks left
-            for today
+            for today.
           </h2>
         </div>
       </SidebarGroupContent>

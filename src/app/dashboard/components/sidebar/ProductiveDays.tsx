@@ -11,13 +11,11 @@ import {
 import {
   Card,
   CardContent,
-  CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
 import { ChartConfig, ChartContainer } from "@/components/ui/chart";
-import { TrendingUp } from "lucide-react";
 const chartData = [
   { browser: "safari", days: 10, fill: "var(--color-safari)" },
 ];
@@ -32,11 +30,14 @@ const chartConfig = {
   },
 } satisfies ChartConfig;
 
-export function CurrentStreak() {
+export function ProductiveDays() {
   return (
-    <Card className="flex flex-col">
+    <Card className="flex flex-col bg-transparent w-[95%] mx-auto pb-4">
       <CardHeader className="items-center pb-0">
-        <CardTitle>Current Streak</CardTitle>
+        <p className="text-2xl font-bold">February</p>
+        <CardTitle className="text-lg text-light_heading dark:text-dark_heading">
+          Productive Days
+        </CardTitle>
       </CardHeader>
       <CardContent className="flex-1 pb-0">
         <ChartContainer
@@ -92,14 +93,6 @@ export function CurrentStreak() {
           </RadialBarChart>
         </ChartContainer>
       </CardContent>
-      <CardFooter className="flex-col gap-2 text-sm">
-        <div className="flex items-center gap-2 font-medium leading-none">
-          Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
-        </div>
-        <div className="leading-none text-muted-foreground">
-          Showing total visitors for the last 6 months
-        </div>
-      </CardFooter>
     </Card>
   );
 }
