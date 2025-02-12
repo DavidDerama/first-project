@@ -69,7 +69,7 @@ export function AppSidebar() {
             <Image alt="logo" height={40} width={42} src="/icon.png" />
           </SidebarGroupLabel>
           <SidebarGroupContent>
-            <SidebarMenu>
+            <SidebarMenu className="gap-2">
               {items.map((item) => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton

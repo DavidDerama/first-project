@@ -11,13 +11,14 @@ import {
 import {
   Card,
   CardContent,
-  CardFooter,
+  CardDescription,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
 import { ChartConfig, ChartContainer } from "@/components/ui/chart";
+
 const chartData = [
-  { browser: "safari", days: 10, fill: "var(--color-safari)" },
+  { browser: "safari", days: 20, fill: "var(--color-safari)" },
 ];
 
 const chartConfig = {
@@ -32,12 +33,10 @@ const chartConfig = {
 
 export function ProductiveDays() {
   return (
-    <Card className="flex flex-col bg-transparent w-[95%] mx-auto pb-4">
+    <Card className="flex flex-col w-[95%] mx-auto pb-4 bg-light dark:bg-dark_input_bg dark:border-dark_input_border">
       <CardHeader className="items-center pb-0">
-        <p className="text-2xl font-bold">February</p>
-        <CardTitle className="text-lg text-light_heading dark:text-dark_heading">
-          Productive Days
-        </CardTitle>
+        <CardTitle className="text-xl">Productive Days</CardTitle>
+        <CardDescription className="text-lg">February</CardDescription>
       </CardHeader>
       <CardContent className="flex-1 pb-0">
         <ChartContainer
@@ -73,7 +72,7 @@ export function ProductiveDays() {
                         <tspan
                           x={viewBox.cx}
                           y={viewBox.cy}
-                          className="fill-foreground text-4xl font-bold"
+                          className="fill-foreground text-5xl font-bold"
                         >
                           {chartData[0].days.toLocaleString()}
                         </tspan>
