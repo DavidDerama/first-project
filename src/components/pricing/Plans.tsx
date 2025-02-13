@@ -4,7 +4,7 @@ const subscription = {
   title: "Monthly",
   description: "Everything in Lifetime Access plus:",
   benefits: [
-    "Unlock unlimited AI usage",
+    "Unlock more AI features",
     "Receive personalized monthly AI recaps of your progress similar to Spotify",
   ],
   amount: 5,
@@ -17,7 +17,7 @@ const lifetime = {
   benefits: [
     "Block distractions with our Chrome extension during bedtime",
     "Automatically block websites based on your goals",
-    "Track your daily tasks effortlessly",
+    "Track your daily habits effortlessly",
     "Receive regular updates and improvements",
     "Join a private discord community",
     "Limited AI usage per day",

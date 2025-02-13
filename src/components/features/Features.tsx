@@ -22,21 +22,21 @@ const FeaturesData: Feature[] = [
     id: 2,
     name: "Time Management",
     description:
-      "By blocking websites at bedtime and showing your completed tasks, you feel accomplished and excited for the next day, making sleeping early easier.",
+      "By blocking websites at bedtime and showing your completed habits, you feel accomplished and excited for the next day, making sleeping early easier.",
     icon: <Clock size={iconSize} />,
   },
   {
     id: 3,
     name: "Habit Tracking",
     description:
-      "Forget the fake rewards and empty progress on your screen. Complete tasks, level up; miss them, level down.",
+      "Forget the fake rewards and empty progress on your screen. Complete habits, level up; miss them, stay the same.",
     icon: <ChartArea size={iconSize} />,
   },
   {
     id: 4,
     name: "AI Assistance",
     description:
-      "Our AI recommends daily tasks and blocks websites based on your goals. For example, if your goal is to be financially responsible, it may recommend blocking gambling sites to help you stay on track.",
+      "Our AI recommends daily habits and blocks websites based on your goals. For example, if your goal is to be financially responsible, it may recommend blocking gambling sites to help you stay on track.",
     icon: <Bot size={iconSize} />,
   },
   {

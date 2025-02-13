@@ -13,12 +13,12 @@ const items = [
         LateControl helps you break the cycle of staying up late and waking up
         in a hurry or not getting anything done the next day by blocking
         distracting websites at bedtime and encouraging you to achieve daily
-        tasks that gets you closer to your future goals.
+        habits that gets you closer to your future goals.
         <br />
         <br />
         The app also ensures you stay productive and accountable with features
-        like AI recommended tasks based on your goals, future goals tracking,
-        and a supportive discord community.
+        like AI recommended habits based on your goals and future goals
+        tracking.
       </p>
     ),
   },
@@ -41,7 +41,7 @@ const items = [
         <br />
         <br />
         LateControl simplifies habit tracking, blocks distractions, and helps
-        you manage your time effectively by showing future goals and the tasks
+        you manage your time effectively by showing future goals and the habits
         related to achieving them. No complex systems or steep learning curves
         just a clear, simple way to achieve your dream self.
       </p>

@@ -14,7 +14,7 @@ export default function Reminder() {
                 <span className="text-light_heading dark:text-dark_heading font-bold flex gap-1 items-center">
                   <Repeat /> 4
                 </span>
-                tasks
+                habits
               </div>
               left for today.
             </div>
