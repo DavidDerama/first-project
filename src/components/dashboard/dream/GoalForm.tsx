@@ -8,13 +8,13 @@ import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
-  FormLabel,
   FormMessage,
 } from "@/components/ui/form";
 import { Textarea } from "@/components/ui/textarea";
+import { LoaderCircle, MoveRight } from "lucide-react";
+import { twMerge } from "tailwind-merge";
 
 type GoalFormProps = {
   onSubmit: (formdata: GoalFormType) => void;
@@ -31,7 +31,10 @@ export function GoalForm({ onSubmit, isPending }: GoalFormProps) {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+      <form
+        onSubmit={form.handleSubmit(onSubmit)}
+        className="space-y-4 flex flex-col border-2 border-input rounded-md pb-4"
+      >
         <FormField
           control={form.control}
           name="description"
@@ -41,15 +44,43 @@ export function GoalForm({ onSubmit, isPending }: GoalFormProps) {
                 <Textarea
                   placeholder="Describe your dream self, and we’ll suggest daily habits to get you started. The more details, the better!"
                   {...field}
-                  className="resize-none h-80"
+                  className="resize-none h-40"
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter" && !e.shiftKey) {
+                      form.handleSubmit(onSubmit)();
+                      console.log("TEST");
+                    }
+                  }}
+                  disabled={isPending}
                 />
               </FormControl>
               <FormMessage />
             </FormItem>
           )}
         />
-        <Button type="submit" disabled={isPending}>
-          {isPending ? "Generating..." : "Generate daily habits"}
+        <Button
+          type="submit"
+          disabled={isPending}
+          className=" rounded-full bg-black text-light ml-auto mr-3 hover:bg-black hover:text-light hover:opacity-65"
+        >
+          {isPending ? (
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className={"animate-spin"}
+            >
+              <path d="M21 12a9 9 0 1 1-6.219-8.56" />
+            </svg>
+          ) : (
+            <MoveRight size={30} />
+          )}
         </Button>
       </form>
     </Form>

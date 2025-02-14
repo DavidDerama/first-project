@@ -10,8 +10,9 @@ import { useMutation } from "@tanstack/react-query";
 export default function page() {
   const [goal, setGoal] = useState<GoalWithDailyHabitsType | null>(null);
 
-  const { mutate, isPending } = useMutation({
+  const { mutate, isPending, isSuccess } = useMutation({
     mutationFn: async (formData: GoalFormType) => {
+      setGoal(null);
       const { generatedGoal } = await generateDailyHabits(formData);
       setGoal(generatedGoal);
     },
@@ -19,8 +20,8 @@ export default function page() {
 
   return (
     <DashboardMain>
-      <div className="flex flex-col gap-6">
-        <CreateGoal onSubmit={mutate} isPending={isPending} />
+      <div className="flex flex-col gap-10">
+        {!isSuccess && <CreateGoal onSubmit={mutate} isPending={isPending} />}
         {goal && <DisplayGoal data={goal} />}
       </div>
     </DashboardMain>

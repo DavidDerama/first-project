@@ -9,10 +9,15 @@ type DisplayGoalProps = {
 export default function DisplayGoal({ data }: DisplayGoalProps) {
   const { title, habits, block_websites } = data;
 
-  const displayDailyHabits = habits.map(({ title, id }) => {
+  const displayDailyHabits = habits.map(({ title, id, description }) => {
     return (
-      <div key={id}>
-        <p className="text-light_paragraph dark:text-dark_heading">{title}</p>
+      <div key={id} className="flex flex-col gap-1">
+        <p className="text-light_paragraph dark:text-dark_heading font-bold">
+          {title}
+        </p>
+        <p className="text-light_paragraph dark:text-dark_paragraph">
+          {description}
+        </p>
       </div>
     );
   });
@@ -23,14 +28,6 @@ export default function DisplayGoal({ data }: DisplayGoalProps) {
         className="text-accent_custom flex gap-2 py-3 px-3 border rounded-lg items-center"
         key={id}
       >
-        <div className="flex justify-center items-center">
-          <Image
-            src={`https://www.google.com/s2/favicons?domain=${url}&sz=64`}
-            alt="Favicon"
-            height={25}
-            width={25}
-          />
-        </div>
         <p>{url}</p>
       </li>
     );
@@ -39,11 +36,13 @@ export default function DisplayGoal({ data }: DisplayGoalProps) {
   return (
     <section>
       <div>
-        <h3 className="text-2xl font-bold mb-8">{title}</h3>
+        <h3 className="text-2xl font-bold mb-6">{title}</h3>
         <div className="flex flex-col gap-6">
           <div>
             <h4 className="text-xl font-bold mb-3">Daily Habits</h4>
-            {displayDailyHabits}
+            <div className="flex flex-col gap-4 max-w-[450px]">
+              {displayDailyHabits}
+            </div>
           </div>
           {block_websites.length ? (
             <div>
