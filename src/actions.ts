@@ -5,7 +5,6 @@ import { revalidatePath } from "next/cache";
 
 import { generateObject } from "ai";
 import { openai } from "@ai-sdk/openai";
-import { z } from "zod";
 
 import { generateDailyHabitsSchema, GoalFormType } from "./lib/schema";
 
@@ -23,4 +22,8 @@ export async function generateDailyHabits(formData: GoalFormType) {
   });
 
   return { generatedGoal };
+}
+
+export async function saveGoal() {
+  revalidatePath("/dashboard/dream");
 }

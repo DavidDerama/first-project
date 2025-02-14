@@ -1,12 +1,13 @@
 import { GoalWithDailyHabitsType } from "@/lib/schema";
-import Image from "next/image";
 import React from "react";
+import SaveGoal from "./SaveGoal";
 
 type DisplayGoalProps = {
   data: GoalWithDailyHabitsType;
+  clearAll: () => void;
 };
 
-export default function DisplayGoal({ data }: DisplayGoalProps) {
+export default function DisplayGoal({ data, clearAll }: DisplayGoalProps) {
   const { title, habits, block_websites } = data;
 
   const displayDailyHabits = habits.map(({ title, id, description }) => {
@@ -58,6 +59,7 @@ export default function DisplayGoal({ data }: DisplayGoalProps) {
           )}
         </div>
       </div>
+      <SaveGoal clearAll={clearAll} />
     </section>
   );
 }
