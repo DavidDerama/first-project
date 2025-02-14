@@ -11,6 +11,7 @@ import {
   FormDescription,
   FormField,
   FormItem,
+  FormLabel,
   FormMessage,
 } from "@/components/ui/form";
 import { Textarea } from "@/components/ui/textarea";
@@ -24,7 +25,7 @@ export function GoalForm({ onSubmit, isPending }: GoalFormProps) {
   const form = useForm<GoalFormType>({
     resolver: zodResolver(goalFormSchema),
     defaultValues: {
-      title: "",
+      description: "",
     },
   });
 
@@ -33,25 +34,21 @@ export function GoalForm({ onSubmit, isPending }: GoalFormProps) {
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
         <FormField
           control={form.control}
-          name="title"
+          name="description"
           render={({ field }) => (
             <FormItem>
               <FormControl>
                 <Textarea
-                  placeholder="a good programmer / muscular / disciplined"
+                  placeholder="Describe your dream self, and we’ll suggest daily habits to get you started. The more details, the better!"
                   {...field}
                   className="resize-none h-80"
                 />
               </FormControl>
-              <FormDescription>
-                Describe your dream self, and we'll create daily habits to help
-                you achieve it. More details lead to better results!
-              </FormDescription>
               <FormMessage />
             </FormItem>
           )}
         />
-        <Button type="submit">
+        <Button type="submit" disabled={isPending}>
           {isPending ? "Generating..." : "Generate daily habits"}
         </Button>
       </form>

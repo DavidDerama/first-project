@@ -1,8 +1,9 @@
-import { title } from "process";
 import { z } from "zod";
 
 export const goalFormSchema = z.object({
-  title: z.string(),
+  description: z
+    .string()
+    .min(5, "Description must be at least 5 characters long."),
 });
 
 export const generateDailyHabitsSchema = z.object({
@@ -13,6 +14,7 @@ export const generateDailyHabitsSchema = z.object({
     ),
   habits: z.array(
     z.object({
+      id: z.string().uuid(),
       title: z
         .string()
         .describe(
@@ -22,11 +24,11 @@ export const generateDailyHabitsSchema = z.object({
   ),
   block_websites: z.array(
     z.object({
+      id: z.string().uuid(),
       url: z
         .string()
-        .url()
         .describe(
-          "Recommend blocking 5-10 popular websites that distract from the user's goal (e.g., gambling sites for financial goals, or social media for productivity). Grab the most recent most popular websites and recommend those."
+          "Only recommend blocking 5-10 websites (by hostname and top-level domain, no pathnames or slashes) if and only if the user explicitly or implicitly states they waste time on them or if the problem they describe is directly tied to these sites. Do not assume or suggest generic distractions like social media unless the user specifically mentions them as an issue."
         ),
     })
   ),

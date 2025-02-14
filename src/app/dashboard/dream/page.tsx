@@ -12,8 +12,8 @@ export default function page() {
 
   const { mutate, isPending } = useMutation({
     mutationFn: async (formData: GoalFormType) => {
-      const { goals } = await generateDailyHabits(formData);
-      setGoal(goals);
+      const { generatedGoal } = await generateDailyHabits(formData);
+      setGoal(generatedGoal);
     },
   });
 
