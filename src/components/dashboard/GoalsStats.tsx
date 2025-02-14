@@ -52,8 +52,8 @@ const goalsEl = items.map((item) => {
 export default function GoalsStats() {
   return (
     <section>
-      <h2 className="text-4xl font-bold">Goals</h2>
-      <div className="flex gap-2 mt-8 flex-wrap">
+      <h2 className="text-4xl font-bold mb-8">Goals</h2>
+      <div className="flex gap-2 flex-wrap">
         <div className="flex gap-2 w-full flex-wrap">{goalsEl}</div>
       </div>
     </section>

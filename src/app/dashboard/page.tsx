@@ -1,5 +1,5 @@
-import DashboardMain from "./components/DashboardMain";
-import GoalsStats from "./components/GoalsStats";
+import DashboardMain from "@/components/dashboard/DashboardMain";
+import GoalsStats from "@/components/dashboard/GoalsStats";
 
 export default function Page() {
   return (

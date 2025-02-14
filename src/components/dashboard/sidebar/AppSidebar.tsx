@@ -100,7 +100,6 @@ export function AppSidebar() {
         </SidebarGroup>
         <Reminder />
         <Productive />
-        {/* <DatePicker /> */}
       </SidebarContent>
       {!isFetching && (
         <SidebarFooter className="flex">
